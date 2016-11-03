@@ -14,7 +14,8 @@ public class RegionChangeEvent extends Event<RegionChangeEvent> {
     private final boolean continuous;
 
     public RegionChangeEvent(int id, LatLngBounds bounds, LatLng center, boolean continuous) {
-        super(id, System.currentTimeMillis());
+        // super(id, System.currentTimeMillis());
+        super(id);// TODO(z.z): modify with react native 0.35.0
         this.bounds = bounds;
         this.center = center;
         this.continuous = continuous;

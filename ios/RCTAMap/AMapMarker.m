@@ -77,9 +77,9 @@
         // TODO(lmr): Looks like this API was introduces in iOS 8. We may want to handle differently for earlier
         // versions. Right now it's just leaving it with the default color. People needing the colors are free to
         // use their own custom markers.
-        
+
         [_pinView setPinColor:self.pinColor];
-        
+
 
         return _pinView;
     } else {
@@ -213,6 +213,7 @@
                                                                          clipped:YES
                                                                       resizeMode:UIViewContentModeCenter
                                                                    progressBlock:nil
+                                                                partialLoadBlock:nil// TODO(z.z): modify with react native 0.35.0
                                                                  completionBlock:^(NSError *error, UIImage *image) {
                                                                      if (error) {
                                                                          // TODO(lmr): do something with the error?
